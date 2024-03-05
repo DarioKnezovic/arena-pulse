@@ -1,0 +1,8 @@
+.admin {
+  min-height: 100vh;
+  main {
+    margin-top: 64px;
+    min-height: calc(100vh - 64px);
+    padding: 15px;
+  }
+}

@@ -1,0 +1,16 @@
+.landing-page {
+  main {
+    min-height: 100vh;
+    @include flex-center;
+
+    /* Define the gradient */
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+    /* Ensure the background covers the entire page */
+    background-attachment: fixed;
+    background-size: cover;
+
+    /* Smoothly transition the background on load */
+    transition: background 0.3s ease-in-out;
+  }
+}

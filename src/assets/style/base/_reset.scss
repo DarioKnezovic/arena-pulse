@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100vh; // This makes the html and body fill the entire viewport height
+  margin: 0;
+  padding: 0;
+}
+
+.v-card {
+  z-index: unset !important;
+}
