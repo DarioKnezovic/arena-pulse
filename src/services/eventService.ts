@@ -1,9 +1,10 @@
 import axios from '../plugins/axios';
 import type { Event } from "../interfaces/models/Event";
+import { envs } from "../utils/constants/envs";
 
 export const getAllEvents = async (params: string): Promise<Event[]> => {
     try {
-        const response = await axios.get(`api/v1/json/60130162/eventsday.php${params}`);
+        const response = await axios.get(`api/v1/json/${envs.API_KEY}/eventsday.php${params}`);
         return response.data.events;
     } catch (err: Error) {
         console.error(err);
@@ -13,7 +14,7 @@ export const getAllEvents = async (params: string): Promise<Event[]> => {
 
 export const getSingleEvent = async (id: string): Promise<Event> => {
     try {
-        const response = await axios.get(`/api/v1/json/60130162/lookupevent.php?id=${id}`);
+        const response = await axios.get(`/api/v1/json/${envs.API_KEY}/lookupevent.php?id=${id}`);
         return response.data.events[0];
     } catch (err: Error) {
         console.error(err);

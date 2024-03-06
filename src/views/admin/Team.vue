@@ -57,7 +57,6 @@
 
   onMounted(async () => {
     await teamStore.getTeamDetails(id);
-    console.log(teamStore.team);
   });
 </script>
 
