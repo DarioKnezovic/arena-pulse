@@ -5,4 +5,5 @@ export enum WebPath {
   ABOUT = '/about',
   SINGLE_EVENT = '/event/:id',
   TEAM_DETAILS = '/team/:id',
+  LEAGUES = '/leagues',
 }
