@@ -25,7 +25,9 @@
       <v-card-text>
         <div>{{ eventStore.event.dateEvent }} at {{ eventStore.event.strTimeLocal }}</div>
         <div><b>Round</b>: {{ RoundTypes[eventStore.event.intRound] || 'Regular Season' }}</div>
-        <div><b>Location</b>: {{ eventStore.event.strVenue }}, {{ eventStore.event.strCity }}</div>
+        <div v-if="eventStore.event.strVenue && eventStore.event.strCity">
+          <b>Location</b>: {{ eventStore.event.strVenue }}, {{ eventStore.event.strCity }}
+        </div>
         <div><b>Score</b>: {{ eventStore.event.intHomeScore }} - {{ eventStore.event.intAwayScore }}</div>
       </v-card-text>
     </v-card>
