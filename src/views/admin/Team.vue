@@ -31,14 +31,15 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <h3>Connect with Us</h3>
+        <h3 class="mb-3">
+          Connect with Us</h3>
         <v-btn icon :href="teamStore.team.strFacebook" target="_blank">
           <v-icon>mdi-facebook</v-icon>
         </v-btn>
-        <v-btn icon :href="teamStore.team.strTwitter" target="_blank">
+        <v-btn icon class="ml-2" :href="teamStore.team.strTwitter" target="_blank">
           <v-icon>mdi-twitter</v-icon>
         </v-btn>
-        <v-btn icon :href="teamStore.team.strWebsite" target="_blank">
+        <v-btn icon class="ml-2" :href="teamStore.team.strWebsite" target="_blank">
           <v-icon>mdi-web</v-icon>
         </v-btn>
       </v-col>
