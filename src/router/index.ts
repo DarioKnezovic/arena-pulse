@@ -1,6 +1,5 @@
 import * as RouteRecordRaw from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router';
-import * as Meta from '@/interfaces/router/Meta';
 import HomeView from '../views/HomeView.vue';
 import { setupNavigationGuards } from './navigationGuards';
 import { WebPath } from '../utils/constants/web-paths';
@@ -46,6 +45,12 @@ const routes: Array<RouteRecordRaw & { meta: Meta }> = [
     name: 'leagues',
     meta: { layout: 'Admin', requiresAuth: true },
     component: () => import('../views/admin/Leagues.vue'),
+  },
+  {
+    path: WebPath.LEAGUE,
+    name: 'league',
+    meta: { layout: 'Admin', requiresAuth: true },
+    component: () => import('../views/admin/LeagueDetails.vue'),
   }
 ];
 

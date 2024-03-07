@@ -1,4 +1,4 @@
-export declare interface Meta {
+interface Meta {
   layout: string;
   requiresAuth?: boolean;
 }

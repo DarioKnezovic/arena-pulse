@@ -15,6 +15,7 @@
       :items="filteredLeagues"
       item-key="idLeague"
       class="elevation-1"
+      @click:row="onRowClick"
   />
 </template>
 
@@ -22,9 +23,15 @@
   import { computed, onMounted, ref } from "vue";
   import { useLeagueStore } from "../../stores/league";
   import { useSportStore } from "../../stores/sport";
+  import { useRouter } from "vue-router";
 
   const leagueStore = useLeagueStore();
   const sportStore = useSportStore();
+  const router = useRouter();
+
+  const onRowClick = (_, row) => {
+    router.push({ name: 'league', params: { id: row.item.idLeague } });
+  };
 
   const sportFilter = ref(null);
   const tableHeaders = [
