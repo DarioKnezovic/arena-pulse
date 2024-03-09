@@ -7,4 +7,5 @@ export enum WebPath {
   TEAM_DETAILS = '/team/:id',
   LEAGUES = '/leagues',
   LEAGUE = '/league/:id',
+  TEAMS = '/teams',
 }

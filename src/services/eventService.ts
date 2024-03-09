@@ -4,7 +4,7 @@ import { envs } from "../utils/constants/envs";
 
 export const getAllEvents = async (params: string): Promise<Event[]> => {
     try {
-        const response = await axios.get(`api/v1/json/${envs.API_KEY}/eventsday.php${params}`);
+        const response = await axios.get(`/api/v1/json/${envs.API_KEY}/eventsday.php${params}`);
         return response.data.events;
     } catch (err: Error) {
         console.error(err);

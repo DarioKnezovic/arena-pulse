@@ -51,6 +51,12 @@ const routes: Array<RouteRecordRaw & { meta: Meta }> = [
     name: 'league',
     meta: { layout: 'Admin', requiresAuth: true },
     component: () => import('../views/admin/LeagueDetails.vue'),
+  },
+  {
+    path: WebPath.TEAMS,
+    name: 'teams',
+    meta: { layout: 'Admin', requiresAuth: true },
+    component: () => import('../views/admin/Teams.vue'),
   }
 ];
 
